@@ -1,3 +1,9 @@
+# chargement des librairies
+require(ggplot2)
+require(ggpubr)
+require(ggtheme)
+require(readr)
+
 # chargement des donnees ouvertes etalab ----------------------------------
 
 # https://www.data.gouv.fr/fr/datasets/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19/
