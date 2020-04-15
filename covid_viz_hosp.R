@@ -16,9 +16,10 @@ df_quot <- read_delim("https://static.data.gouv.fr/resources/donnees-hospitalier
 # COG
 dep <- read_csv("G:/00_data_ref/insee/COG/departement2020.csv")
 reg <- read_csv("G:/00_data_ref/insee/COG/region2020.csv")
-
+# on fusionne pour obtenir un jointure possible entre departement et region
 cog <- merge(dep, reg, by="reg", all.x = TRUE) # nouvo df
 
+# on merge les donnees metiers et les reference cog.
 df_hospr <- merge(df_hosp, cog, by="dep", all.x = TRUE) # nouvo df
 df_quotr <- merge(df_quot, cog, by="dep", all.x = TRUE) # nouvo df
 dim(df_hosp)
